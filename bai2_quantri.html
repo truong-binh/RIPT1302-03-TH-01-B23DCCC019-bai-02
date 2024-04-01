@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="main_quantri.css">
+</head>
+<body>
+    <h1 class="title">Trang quản trị</h1>
+    <h2>Quản lý sinh viên</h2>
+    <div class="body">
+        <div>
+            <button class="them_moi" onclick="themsv()">Thêm mới</button>
+        </div>
+        <table>
+            <thead class="table">
+                <tr>
+                    <th class="phantu">STT</th>
+                    <th class="phantu">Tên</th>
+                    <th class="phantu">Tuổi</th>
+                    <th class="phantu">Địa chỉ</th>
+                    <th class="phantu">SDT</th>
+                    <th class="phantu">Email</th>
+                    <th class="phantu">Lớp học</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        studens =[]
+        var studentCount = studens.length; 
+        function user(ten, tuoi , dia_chi, sdt, email, classs) { 
+            this.ten= ten;
+            this.tuoi=tuoi
+            this.dia_chi=dia_chi
+            this.email= email
+            this.classs= classs
+        }
+        function themsv() {
+            studentCount++;
+            var newRow = document.createElement("tr");
+            
+            var cell1 = document.createElement("td");
+            cell1.textContent = studentCount;
+
+            var cell2 = document.createElement("td");
+            cell2.textContent =prompt("Tên");
+
+            var cell3 = document.createElement("td");
+            cell3.textContent = prompt("Tuổi");
+
+            var cell4 = document.createElement("td");
+            cell4.textContent =prompt("Địa chỉ");
+
+            var cell5 = document.createElement("td");
+            cell5.textContent =prompt("SDT");
+
+            var cell6 = document.createElement("td");
+            cell6.textContent =prompt("Email");
+
+            var cell7 = document.createElement("td");
+            cell7.textContent =prompt("Lớp học");
+            
+            newRow.appendChild(cell1);
+            newRow.appendChild(cell2);
+            newRow.appendChild(cell3);
+            newRow.appendChild(cell4);
+            newRow.appendChild(cell5);
+            newRow.appendChild(cell6);
+            newRow.appendChild(cell7);
+
+            sv= new user(cell1,cell2,cell3,cell4,cell5,cell6,cell7)
+            studens.push(sv)
+            document.getElementById("studentTableBody").appendChild(newRow);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="main2.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="form">
+            <div class="body">
+                <h3 class="login">Login</h3>
+                <div class="form-dangnhap">
+                    <input type="text" class="user" placeholder="Username">
+                    <input type="password" class="user" placeholder="Password">
+                </div>
+            </div>
+            <div class="footer">
+                <button class="submit" onclick="button()">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function button() {
+            var user = document.getElementsByClassName("user")[0].value;
+            var password= document.getElementsByClassName("user")[1].value;
+            if (user== "admin" && password=="admin") {
+                window.location.href= "bai2_quantri.html"
+            }
+            else {
+                alert("Tài khoản mật khẩu không chính xác")
+            }
+        }
+    </script>
+</body>
+</html>

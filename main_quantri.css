@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+    color: #2dcc70;
+}
+
+.them_moi {
+    color: white;
+    background-color: red;
+    border: none;
+    width: 80px;
+    border-radius: 4px;
+    height: 30px;
+    margin: 8px;
+} 
+
+.phantu {
+    padding: 6px 70px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 95%);
+}
+
